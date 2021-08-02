@@ -1,9 +1,11 @@
 #for i in range(0,101):
 #    print(i)
 
-names = ["Hannah", "Anya", "Irina"]
+ctr = 0
+names = ["Hannah", "Anya", "Irina", "Olivia"]
 
 for name in names:
+    print()
     print(f"Full name: {name}")
     #using f inside print allows using variables inside string held by braces
 
@@ -22,3 +24,22 @@ for name in names:
     print(f"Number of times letter A appears on name: {name.count('a')}")
     #be aware that when using strings, you can either use " " or ' ' but
     #ensure to add backslash to literally print the symbols
+
+print("\nGetting names list..")
+while ctr < 4: #tries to loop through for items of an array
+    if names[ctr] == "Olivia": #if it finds names[3]
+        print("Skipping fourth name..")
+        break #loop breaks and does not continue any further, skipping name
+    print(names[ctr])
+    ctr += 1
+#python has no do while, just while so it's best to set a counter
+#or any other statement that eventually gets fulfilled
+
+print("\nRe-acquiring names list..")
+for f in range(0, 4):
+    print(names[f])
+#while other programming languages use for(f==0; f<4; f++)
+#python just uses range(0,4)
+#so 0 is the starting index, 4 is like f<4 so it doesn't include 4 on
+#the actual loop, the number before it
+#so it prints all names from names[0] to names[3]
