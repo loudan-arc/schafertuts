@@ -33,3 +33,11 @@ engi.pop("comment")
 print(f"{engi['name']} comment removed: {engi.get('comment', 'no comment')}")
 #pop removes the value for a specific key, can be stored to variable
 #this should have no comment
+
+print()
+
+print(f"Reading {medic['name']} dictionary (hashmap) stats...")
+for key, val in medic.items():
+    print(f"{key}: {val}")
+#using .items() on a dictionary is the right way to get
+#the key and values at once to loop from
